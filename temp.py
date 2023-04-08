@@ -6,7 +6,7 @@ import mysql.connector
 
 
 # loading the saved model
-loaded_model = pickle.load(open('C:/Users/havis/Downloads/trained.sav', 'rb'))
+loaded_model = pickle.load(open('trained.sav', 'rb'))
 
 
 # creating a function for Prediction
