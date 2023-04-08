@@ -5,19 +5,19 @@ import mysql.connector
 
 
 
-# loading the saved model
+
 loaded_model = pickle.load(open('trained.sav', 'rb'))
 
 
-# creating a function for Prediction
+
 
 def diabetes_prediction(input_data):
     
 
-    # changing the input_data to numpy array
+    
     input_data_as_numpy_array = np.asarray(input_data)
 
-    # reshape the array as we are predicting for one instance
+    
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
     prediction = loaded_model.predict(input_data_reshaped)
@@ -54,11 +54,11 @@ def insert_data(input_data, output_data):
 def main():
    
     
-    # giving a title
+  
     st.title('Diabetes Prediction')
     
     
-    # getting the input data from the user
+   
     
     
     Pregnancies = st.text_input('Number of Pregnancies')
